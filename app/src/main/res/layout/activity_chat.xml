@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_chat"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.administrator.chatdemo.ChatActivity">
+    <TextView
+        android:id="@+id/tv_name"
+        android:background="@color/avoscloud_timestamp_gray"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"/>
+    <ListView
+        android:id="@+id/chat_list"
+        android:layout_below="@+id/tv_name"
+        android:layout_above="@+id/inp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/inp"
+        android:background="@drawable/input_rear_bg"
+        android:padding="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+    <EditText
+        android:focusableInTouchMode="true"
+        android:paddingLeft="2dp"
+        android:textCursorDrawable="@drawable/text_cursor_drawable"
+        android:layout_centerVertical="true"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/btn_send"
+        android:background="@drawable/edit_text_bg"
+        android:layout_marginRight="10dp"
+        android:id="@+id/et_content"
+        android:minHeight="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <Button
+        android:text="发送"
+        android:id="@+id/btn_send"
+        android:layout_alignBottom="@+id/et_content"
+        android:layout_alignParentRight="true"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:background="@color/avoscloud_blue"/>
+    </RelativeLayout>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.design.widget.CoordinatorLayout>
+</RelativeLayout>
